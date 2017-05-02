@@ -39,6 +39,86 @@
             "location": "/about/#sanctius-mittere-dracones-vellet-phoebo-abductas", 
             "text": "Tardis et horto vultus et raptor Procnes pactaque fidem rite dabat catenis.\nDicta Aeaciden et deos Attica flexisque caeli, tam speciem exstanti corpore\nlaboras totidemque Pandione. Digna me parabat alma dei tenuere mihi factus virgo\ndesinite,  nova : lacrimis locus; aures. Sunt ferarum dabat redditus Nescierat\nperque, dum misit montes sanguine ferox alter alis avertere, quarto. Tam  quibus\ncontigit  nymphae abit inquit.  searchAddressMedia = ipv;\nvar access = tRom(scan_http_image(4), debugger * ledBccTween, -1 * 5) +\n        dvd_voip_mac;\nif (-2 / whiteWebManagement(install_pram) - process * 51) {\n    icmp *= fat.eidePdfPrimary(snippetFirewireWww);\n    class(57);\n}  Prendique proelia illi. Secuta in amorem proximus fateor? Te vidit petiere\nanimam  credit facibusque  pisce optetis, per\norbis inmensum Iovis responsaque solido nympharum commune, quam atque. Quisquis\namplectitur umerum primo sum humanam Iovi.   Vel longe horamque. Pennis fato; insigne ducentem galeae nullos protinus\nparente et ususabstrahit. Nato venit avidam stabantque mollirique et aliudve!\nFlammas natum hoc ira clamore corpore eodem finditque animoque captatus\ncredere utramque fuit cautibus adopertaque arvis, tuus dicta Atridae.   Nec sit lacerum virtutem fossae tela. Perceperat cervice huic quoque! Nubes et\nSolis pectora arcet flamma Phoebique deceat Chaoque commune vilior furens, et . Ne urna est manebit lumen Hectora\naequor utero linquendus diuturnior totum.", 
             "title": "Sanctius mittere dracones vellet Phoebo abductas"
+        }, 
+        {
+            "location": "/git/", 
+            "text": "git\n\n\n\u4fdd\u5b58\u8ba4\u8bc1\n\n\n\n\ngit config credential.helper store\n\n\n\n\n\u653e\u5f03\u672c\u5730\u4fee\u6539\uff0c\u76f4\u63a5\u8986\u76d6\u4e4b\n\n\n\n\ngit reset --hard\n\n\n\n\n\u672c\u5730\u6ca1\u6709\u8fdc\u7a0b\u5206\u652f\u65f6\n\n\n\n\ngit fetch\n\n\n\n\n\u56de\u6eda\u6700\u8fd1\u4e00\u6b21\u63d0\u4ea4\uff08\u672c\u5730\u6587\u4ef6\u4f1a\u4e22\u5931\uff09\n\n\n(1)\n- \ngit revert HEAD\n  \nlog\u4e0d\u4f1a\u5c11\uff0c\u800c\u4e14\u8fd8\u4f1a\u589e\u52a0\u4e00\u6761revert log\n\n\n(2)\n- \ngit reset --hard HEAD^\n  \nlog\u4f1a\u51cf\u5c11\n\n\n\u5220\u9664\u67d0\u6b21\u5386\u53f2\u63d0\u4ea4\n\n\n\n\ngit rebase -i \"commit id\"^\n\n\n\n\n\u56de\u6edagit add -A\u4f46\u662f\u8fd8\u6ca1\u6709commit\u7684\u5185\u5bb9\n\n\n\n\ngit reset\n\n\n\n\n\u56de\u6eda\uff1a   reset \n revert\n\n\n\n\nhttp://yijiebuyi.com/blog/8f985d539566d0bf3b804df6be4e0c90.html", 
+            "title": "Git"
+        }, 
+        {
+            "location": "/git/#git", 
+            "text": "", 
+            "title": "git"
+        }, 
+        {
+            "location": "/git/#_1", 
+            "text": "git config credential.helper store", 
+            "title": "\u4fdd\u5b58\u8ba4\u8bc1"
+        }, 
+        {
+            "location": "/git/#_2", 
+            "text": "git reset --hard", 
+            "title": "\u653e\u5f03\u672c\u5730\u4fee\u6539\uff0c\u76f4\u63a5\u8986\u76d6\u4e4b"
+        }, 
+        {
+            "location": "/git/#_3", 
+            "text": "git fetch", 
+            "title": "\u672c\u5730\u6ca1\u6709\u8fdc\u7a0b\u5206\u652f\u65f6"
+        }, 
+        {
+            "location": "/git/#_4", 
+            "text": "(1)\n-  git revert HEAD    log\u4e0d\u4f1a\u5c11\uff0c\u800c\u4e14\u8fd8\u4f1a\u589e\u52a0\u4e00\u6761revert log  (2)\n-  git reset --hard HEAD^    log\u4f1a\u51cf\u5c11", 
+            "title": "\u56de\u6eda\u6700\u8fd1\u4e00\u6b21\u63d0\u4ea4\uff08\u672c\u5730\u6587\u4ef6\u4f1a\u4e22\u5931\uff09"
+        }, 
+        {
+            "location": "/git/#_5", 
+            "text": "git rebase -i \"commit id\"^", 
+            "title": "\u5220\u9664\u67d0\u6b21\u5386\u53f2\u63d0\u4ea4"
+        }, 
+        {
+            "location": "/git/#git-add-acommit", 
+            "text": "git reset", 
+            "title": "\u56de\u6edagit add -A\u4f46\u662f\u8fd8\u6ca1\u6709commit\u7684\u5185\u5bb9"
+        }, 
+        {
+            "location": "/git/#reset-revert", 
+            "text": "http://yijiebuyi.com/blog/8f985d539566d0bf3b804df6be4e0c90.html", 
+            "title": "\u56de\u6eda\uff1a   reset &amp; revert"
+        }, 
+        {
+            "location": "/redis/", 
+            "text": "redis\n\n\n\u670d\u52a1\u7aef\n\n\n\n\n\u542f\u52a8\n\n\n\n\n\u5ba2\u670d\u7aef\n\n\n\u542f\u52a8\n\n\n\n\nredis-cli.exe -h 127.0.0.1 -p 6379\n\n\n\n\n\u8bbe\u7f6e\n\n\n\n\nset robin 123\n\n\n\n\n\u83b7\u53d6\n\n\n\n\nget robin", 
+            "title": "Redis"
+        }, 
+        {
+            "location": "/redis/#redis", 
+            "text": "", 
+            "title": "redis"
+        }, 
+        {
+            "location": "/redis/#_1", 
+            "text": "\u542f\u52a8", 
+            "title": "\u670d\u52a1\u7aef"
+        }, 
+        {
+            "location": "/redis/#_2", 
+            "text": "", 
+            "title": "\u5ba2\u670d\u7aef"
+        }, 
+        {
+            "location": "/redis/#_3", 
+            "text": "redis-cli.exe -h 127.0.0.1 -p 6379", 
+            "title": "\u542f\u52a8"
+        }, 
+        {
+            "location": "/redis/#_4", 
+            "text": "set robin 123", 
+            "title": "\u8bbe\u7f6e"
+        }, 
+        {
+            "location": "/redis/#_5", 
+            "text": "get robin", 
+            "title": "\u83b7\u53d6"
         }
     ]
 }
