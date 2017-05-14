@@ -4,7 +4,15 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-05-02</lastmod>
+     <lastmod>2017-05-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/UnixCommand/</loc>
+     <lastmod>2017-05-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +20,7 @@
     
     <url>
      <loc>/about/</loc>
-     <lastmod>2017-05-02</lastmod>
+     <lastmod>2017-05-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +28,23 @@
     
     <url>
      <loc>/git/</loc>
-     <lastmod>2017-05-02</lastmod>
+     <lastmod>2017-05-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/markdown/</loc>
+     <lastmod>2017-05-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/python/</loc>
+     <lastmod>2017-05-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +52,7 @@
     
     <url>
      <loc>/redis/</loc>
-     <lastmod>2017-05-02</lastmod>
+     <lastmod>2017-05-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

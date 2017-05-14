@@ -21,24 +21,164 @@
             "title": "Project layout"
         }, 
         {
+            "location": "/UnixCommand/", 
+            "text": "Unix Command\n\n\nscp \u6307\u5b9a\u7aef\u53e3\n\n\n\n\nscp -P 36000 ./services.tar root@10.175.85.215:/data/data/log\n\n\n\n\n\u73af\u5883\u53d8\u91cf\u76f8\u5173\n\n\n1\u3001\u67e5\u770b\n\n\n\n\necho $PATH\n\n\n\n\n2\u3001\u6dfb\u52a0\uff08\u4e34\u65f6\uff09\n\n\n\n\nexport PATH=/opt/STM/STLinux-2.3/devkit/sh4/bin:$PATH\n\n\n\n\n3\u3001\u6c38\u4e45\u6dfb\u52a0\u73af\u5883\u53d8\u91cf(\u5f71\u54cd\u5f53\u524d\u7528\u6237)\n\n\n\n\nvim ~/.bashrc\n\n\u5728\u6587\u6863\u6700\u540e\uff0c\u6dfb\u52a0:export PATH=\"/opt/STM/STLinux-2.3/devkit/sh4/bin:$PATH\"\n\n\n\n\n4\u3001\u6c38\u4e45\u6dfb\u52a0\u73af\u5883\u53d8\u91cf(\u5f71\u54cd\u6240\u6709\u7528\u6237)\n\n\n\n\nvim /etc/profile\n\n\u5728\u6587\u6863\u6700\u540e\uff0c\u6dfb\u52a0:export PATH=\"/opt/STM/STLinux-2.3/devkit/sh4/bin:$PATH\"\n\n\n\n\nrm\u53c2\u6570\u592a\u957f\u95ee\u9898\n\n\n\n\nrm preIsolationHandle*\n -\n \nfind . -name \"preIsolationHandle*\" | xargs rm -rf \"preIsolationHandle*\"\n\n\n\n\nfind \n cp\n\n\n\n\nfind ./ -name *.gz |xargs cp -t /data/robin_bak_20160816/\n\n\n\n\n\u76ee\u5f55\u4e0b\u6587\u4ef6\u6570\n\n\n\n\nls | while read dir; do echo $dir\nfind $dir -type f | wc -l\n; done\n\n\n\n\n\u901a\u8fc7\u7aef\u53e3\u67e5\u8fdb\u7a0b\n\n\n\n\nlsof -i :40893\n\n\n\n\n\u627e\u51fa\u5927\u4e8e1G\u7684\u6587\u4ef6\n\n\n\n\ndu -shx * | grep G\n\n\n\n\nfind\u76f8\u5173\n\n\n\n\ndu -shx * | grep G\n\n\nfind ./ -maxdepth 1 -mtime +30|xargs rm -rf\n\n\nfind . -maxdepth 1 -type d -mtime +30 | xargs rm -r\n\n\nfind . -name \"*.php\" | xargs grep \"autoExpandLog\"\n\n\nfind ./ -name *.log -exec ls -lh {} \\;\n\n\n\n\n\u67e5\u770b\u8bbf\u95ee\u672c\u673a\u7684ip\u548c\u8bbf\u95ee\u6b21\u6570\n\n\n\n\nnetstat -tn |grep :80|awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c |sort -n|grep -v Address|grep -v servers\n\n\n\n\n\u67e5\u770bLinux\u7684\u5404\u9879\u5185\u6838\u53c2\u6570\n\n\n\n\n/sbin/sysctl -a\n\n\n\n\ntcp\u94fe\u63a5\u8f6c\u6001\n\n\n\n\nnetstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'\n\n\n\n\ncpu\u76f8\u5173\n\n\n1\u3001\u7269\u7406cpu\u4e2a\u6570\n\n\n\n\ncat /proc/cpuinfo |grep \"physical id\"|sort |uniq|wc -l\n\n\n\n\n2\u3001\u903b\u8f91cpu\u4e2a\u6570\n\n\n\n\ncat /proc/cpuinfo |grep -c processor\n\n\n\n\n3\u3001\u67e5\u770bcpu\u662f\u51e0\u6838\n\n\n\n\ncat /proc/cpuinfo |grep \"cores\"|uniq\n\n\n\n\n4\u3001\u67e5\u770bcpu\u4e3b\u9891\n\n\n\n\ncat /proc/cpuinfo |grep MHz|uniq\n\n\n\n\nstrace\n\n\n\n\nstrace of ./ccat\n\n\n\n\n\u672c\u673aip\n\n\n\n\n/sbin/ifconfig eth1|grep \"inet addr:\"|awk -F \":\" '{ print $2 }'|awk '{ print $1 }'\n\n\n\n\n\u6e05host\u7f13\u5b58\n\n\n\n\n/etc/init.d/nscd restart\n\n\n\n\nrsync\n\n\n\n\nrsync -a user_00@10.10.10.10::/data/ssh.php ./\n\n\nrsync -a ./link.json.js user_00@10.10.10.10::data/\n\n\n``\n\n\n``\n\n\n\n\n\u89e3\u538b", 
+            "title": "UnixCommand"
+        }, 
+        {
+            "location": "/UnixCommand/#unix-command", 
+            "text": "", 
+            "title": "Unix Command"
+        }, 
+        {
+            "location": "/UnixCommand/#scp", 
+            "text": "scp -P 36000 ./services.tar root@10.175.85.215:/data/data/log", 
+            "title": "scp \u6307\u5b9a\u7aef\u53e3"
+        }, 
+        {
+            "location": "/UnixCommand/#_1", 
+            "text": "", 
+            "title": "\u73af\u5883\u53d8\u91cf\u76f8\u5173"
+        }, 
+        {
+            "location": "/UnixCommand/#1", 
+            "text": "echo $PATH", 
+            "title": "1\u3001\u67e5\u770b"
+        }, 
+        {
+            "location": "/UnixCommand/#2", 
+            "text": "export PATH=/opt/STM/STLinux-2.3/devkit/sh4/bin:$PATH", 
+            "title": "2\u3001\u6dfb\u52a0\uff08\u4e34\u65f6\uff09"
+        }, 
+        {
+            "location": "/UnixCommand/#3", 
+            "text": "vim ~/.bashrc \n\u5728\u6587\u6863\u6700\u540e\uff0c\u6dfb\u52a0:export PATH=\"/opt/STM/STLinux-2.3/devkit/sh4/bin:$PATH\"", 
+            "title": "3\u3001\u6c38\u4e45\u6dfb\u52a0\u73af\u5883\u53d8\u91cf(\u5f71\u54cd\u5f53\u524d\u7528\u6237)"
+        }, 
+        {
+            "location": "/UnixCommand/#4", 
+            "text": "vim /etc/profile \n\u5728\u6587\u6863\u6700\u540e\uff0c\u6dfb\u52a0:export PATH=\"/opt/STM/STLinux-2.3/devkit/sh4/bin:$PATH\"", 
+            "title": "4\u3001\u6c38\u4e45\u6dfb\u52a0\u73af\u5883\u53d8\u91cf(\u5f71\u54cd\u6240\u6709\u7528\u6237)"
+        }, 
+        {
+            "location": "/UnixCommand/#rm", 
+            "text": "rm preIsolationHandle*  -   find . -name \"preIsolationHandle*\" | xargs rm -rf \"preIsolationHandle*\"", 
+            "title": "rm\u53c2\u6570\u592a\u957f\u95ee\u9898"
+        }, 
+        {
+            "location": "/UnixCommand/#find-cp", 
+            "text": "find ./ -name *.gz |xargs cp -t /data/robin_bak_20160816/", 
+            "title": "find &amp;&amp; cp"
+        }, 
+        {
+            "location": "/UnixCommand/#_2", 
+            "text": "ls | while read dir; do echo $dir find $dir -type f | wc -l ; done", 
+            "title": "\u76ee\u5f55\u4e0b\u6587\u4ef6\u6570"
+        }, 
+        {
+            "location": "/UnixCommand/#_3", 
+            "text": "lsof -i :40893", 
+            "title": "\u901a\u8fc7\u7aef\u53e3\u67e5\u8fdb\u7a0b"
+        }, 
+        {
+            "location": "/UnixCommand/#1g", 
+            "text": "du -shx * | grep G", 
+            "title": "\u627e\u51fa\u5927\u4e8e1G\u7684\u6587\u4ef6"
+        }, 
+        {
+            "location": "/UnixCommand/#find", 
+            "text": "du -shx * | grep G  find ./ -maxdepth 1 -mtime +30|xargs rm -rf  find . -maxdepth 1 -type d -mtime +30 | xargs rm -r  find . -name \"*.php\" | xargs grep \"autoExpandLog\"  find ./ -name *.log -exec ls -lh {} \\;", 
+            "title": "find\u76f8\u5173"
+        }, 
+        {
+            "location": "/UnixCommand/#ip", 
+            "text": "netstat -tn |grep :80|awk '{print $5}'|awk -F: '{print $1}'|sort|uniq -c |sort -n|grep -v Address|grep -v servers", 
+            "title": "\u67e5\u770b\u8bbf\u95ee\u672c\u673a\u7684ip\u548c\u8bbf\u95ee\u6b21\u6570"
+        }, 
+        {
+            "location": "/UnixCommand/#linux", 
+            "text": "/sbin/sysctl -a", 
+            "title": "\u67e5\u770bLinux\u7684\u5404\u9879\u5185\u6838\u53c2\u6570"
+        }, 
+        {
+            "location": "/UnixCommand/#tcp", 
+            "text": "netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'", 
+            "title": "tcp\u94fe\u63a5\u8f6c\u6001"
+        }, 
+        {
+            "location": "/UnixCommand/#cpu", 
+            "text": "", 
+            "title": "cpu\u76f8\u5173"
+        }, 
+        {
+            "location": "/UnixCommand/#1cpu", 
+            "text": "cat /proc/cpuinfo |grep \"physical id\"|sort |uniq|wc -l", 
+            "title": "1\u3001\u7269\u7406cpu\u4e2a\u6570"
+        }, 
+        {
+            "location": "/UnixCommand/#2cpu", 
+            "text": "cat /proc/cpuinfo |grep -c processor", 
+            "title": "2\u3001\u903b\u8f91cpu\u4e2a\u6570"
+        }, 
+        {
+            "location": "/UnixCommand/#3cpu", 
+            "text": "cat /proc/cpuinfo |grep \"cores\"|uniq", 
+            "title": "3\u3001\u67e5\u770bcpu\u662f\u51e0\u6838"
+        }, 
+        {
+            "location": "/UnixCommand/#4cpu", 
+            "text": "cat /proc/cpuinfo |grep MHz|uniq", 
+            "title": "4\u3001\u67e5\u770bcpu\u4e3b\u9891"
+        }, 
+        {
+            "location": "/UnixCommand/#strace", 
+            "text": "strace of ./ccat", 
+            "title": "strace"
+        }, 
+        {
+            "location": "/UnixCommand/#ip_1", 
+            "text": "/sbin/ifconfig eth1|grep \"inet addr:\"|awk -F \":\" '{ print $2 }'|awk '{ print $1 }'", 
+            "title": "\u672c\u673aip"
+        }, 
+        {
+            "location": "/UnixCommand/#host", 
+            "text": "/etc/init.d/nscd restart", 
+            "title": "\u6e05host\u7f13\u5b58"
+        }, 
+        {
+            "location": "/UnixCommand/#rsync", 
+            "text": "rsync -a user_00@10.10.10.10::/data/ssh.php ./  rsync -a ./link.json.js user_00@10.10.10.10::data/  ``  ``", 
+            "title": "rsync"
+        }, 
+        {
+            "location": "/UnixCommand/#_4", 
+            "text": "", 
+            "title": "\u89e3\u538b"
+        }, 
+        {
             "location": "/about/", 
-            "text": "Maiore est animo rigore adspiciens et remos\n\n\nPatriaque fugit petit Eurynomes Medusaeo tristis resupinum\n\n\nLorem markdownum haec cuiquam quae. Suum aequorei, tempus Philomela ut intrata\nfiducia, o soceri retroque curat agnae deus corpora unda veneno, mihi! Supplice\nresonabat oculosque nitido facerent genas una negari umbra. Caespite hoc, vias\net intervenit aegide; dea ius et. Philammon iuris, rebus pro vincirem Pygmalion\nfacinus inplicuit formosissimus seque.\n\n\n\n\nArbitrio coegerat alterius obductos ipsa\n\n\nPuella suis pro nec mutat\n\n\nVoce enim cornua procubuit alimenta et populo\n\n\nMe pectora nocens et nodosaque quietem facto\n\n\nDivino unde conabar\n\n\n\n\nCarinis hunc stellas, formae! Divitiis superi, in vero commune \nacta sanguine\n\nEchion nomine, \nnisi\n quondam. Neque tenui \nnec\n: et dominum \ntrabes\n, unda\nnec novas oculos pluvialibus frementis suorum consilium. Redditur est sospite,\nmansit vergit, classe ebur ne arma temeraria locum spoliantis at tutus maris\nsub, mea.\n\n\nDuorum temptent irascitur dicunt Minos teque delabere umbram decipiet datis\ndubitas a gener dilapsa haec. \nCepit mater\n. Iam pontum et et ille, sed\nPyramus Phoebum \nsolo\n. Mille sed Parin quae\nspatium, iter, ira medio mihi trementem, ipse. Honore iunctis et illos quid\ntemptat: cremet colloque minimum natus \nore notas\n flectit vetus coniuge\nmulcebant.\n\n\nSanctius mittere dracones vellet Phoebo abductas\n\n\nTardis et horto vultus et raptor Procnes pactaque fidem rite dabat catenis.\nDicta Aeaciden et deos Attica flexisque caeli, tam speciem exstanti corpore\nlaboras totidemque Pandione. Digna me parabat alma dei tenuere mihi factus virgo\ndesinite, \nnova\n: lacrimis locus; aures. Sunt ferarum dabat redditus Nescierat\nperque, dum misit montes sanguine ferox alter alis avertere, quarto. Tam \nquibus\ncontigit\n nymphae abit inquit.\n\n\nsearchAddressMedia = ipv;\nvar access = tRom(scan_http_image(4), debugger * ledBccTween, -1 * 5) +\n        dvd_voip_mac;\nif (-2 / whiteWebManagement(install_pram) - process * 51) {\n    icmp *= fat.eidePdfPrimary(snippetFirewireWww);\n    class(57);\n}\n\n\n\nPrendique proelia illi. Secuta in amorem proximus fateor? Te vidit petiere\nanimam \ncredit facibusque\n pisce optetis, per\norbis inmensum Iovis responsaque solido nympharum commune, quam atque. Quisquis\namplectitur umerum primo sum humanam Iovi.\n\n\n\n\nVel longe horamque. Pennis fato; insigne ducentem galeae nullos protinus\nparente et ususabstrahit. Nato venit avidam stabantque mollirique et aliudve!\nFlammas natum hoc ira clamore corpore eodem finditque animoque captatus\ncredere utramque fuit cautibus adopertaque arvis, tuus dicta Atridae.\n\n\n\n\nNec sit lacerum virtutem fossae tela. Perceperat cervice huic quoque! Nubes et\nSolis pectora arcet flamma Phoebique deceat Chaoque commune vilior furens,\n\net\n. Ne urna est manebit lumen Hectora\naequor utero linquendus diuturnior totum.", 
+            "text": "about author\n\n\nname\n\n\n\n\nrobinhuang\n\n\n\n\nlocate\n\n\n\n\nshenzhen,guangdong\n\n\n\n\nskills\n\n\nphp,javascript,python", 
             "title": "About"
         }, 
         {
-            "location": "/about/#maiore-est-animo-rigore-adspiciens-et-remos", 
+            "location": "/about/#about-author", 
             "text": "", 
-            "title": "Maiore est animo rigore adspiciens et remos"
+            "title": "about author"
         }, 
         {
-            "location": "/about/#patriaque-fugit-petit-eurynomes-medusaeo-tristis-resupinum", 
-            "text": "Lorem markdownum haec cuiquam quae. Suum aequorei, tempus Philomela ut intrata\nfiducia, o soceri retroque curat agnae deus corpora unda veneno, mihi! Supplice\nresonabat oculosque nitido facerent genas una negari umbra. Caespite hoc, vias\net intervenit aegide; dea ius et. Philammon iuris, rebus pro vincirem Pygmalion\nfacinus inplicuit formosissimus seque.   Arbitrio coegerat alterius obductos ipsa  Puella suis pro nec mutat  Voce enim cornua procubuit alimenta et populo  Me pectora nocens et nodosaque quietem facto  Divino unde conabar   Carinis hunc stellas, formae! Divitiis superi, in vero commune  acta sanguine \nEchion nomine,  nisi  quondam. Neque tenui  nec : et dominum  trabes , unda\nnec novas oculos pluvialibus frementis suorum consilium. Redditur est sospite,\nmansit vergit, classe ebur ne arma temeraria locum spoliantis at tutus maris\nsub, mea.  Duorum temptent irascitur dicunt Minos teque delabere umbram decipiet datis\ndubitas a gener dilapsa haec.  Cepit mater . Iam pontum et et ille, sed\nPyramus Phoebum  solo . Mille sed Parin quae\nspatium, iter, ira medio mihi trementem, ipse. Honore iunctis et illos quid\ntemptat: cremet colloque minimum natus  ore notas  flectit vetus coniuge\nmulcebant.", 
-            "title": "Patriaque fugit petit Eurynomes Medusaeo tristis resupinum"
+            "location": "/about/#name", 
+            "text": "robinhuang", 
+            "title": "name"
         }, 
         {
-            "location": "/about/#sanctius-mittere-dracones-vellet-phoebo-abductas", 
-            "text": "Tardis et horto vultus et raptor Procnes pactaque fidem rite dabat catenis.\nDicta Aeaciden et deos Attica flexisque caeli, tam speciem exstanti corpore\nlaboras totidemque Pandione. Digna me parabat alma dei tenuere mihi factus virgo\ndesinite,  nova : lacrimis locus; aures. Sunt ferarum dabat redditus Nescierat\nperque, dum misit montes sanguine ferox alter alis avertere, quarto. Tam  quibus\ncontigit  nymphae abit inquit.  searchAddressMedia = ipv;\nvar access = tRom(scan_http_image(4), debugger * ledBccTween, -1 * 5) +\n        dvd_voip_mac;\nif (-2 / whiteWebManagement(install_pram) - process * 51) {\n    icmp *= fat.eidePdfPrimary(snippetFirewireWww);\n    class(57);\n}  Prendique proelia illi. Secuta in amorem proximus fateor? Te vidit petiere\nanimam  credit facibusque  pisce optetis, per\norbis inmensum Iovis responsaque solido nympharum commune, quam atque. Quisquis\namplectitur umerum primo sum humanam Iovi.   Vel longe horamque. Pennis fato; insigne ducentem galeae nullos protinus\nparente et ususabstrahit. Nato venit avidam stabantque mollirique et aliudve!\nFlammas natum hoc ira clamore corpore eodem finditque animoque captatus\ncredere utramque fuit cautibus adopertaque arvis, tuus dicta Atridae.   Nec sit lacerum virtutem fossae tela. Perceperat cervice huic quoque! Nubes et\nSolis pectora arcet flamma Phoebique deceat Chaoque commune vilior furens, et . Ne urna est manebit lumen Hectora\naequor utero linquendus diuturnior totum.", 
-            "title": "Sanctius mittere dracones vellet Phoebo abductas"
+            "location": "/about/#locate", 
+            "text": "shenzhen,guangdong", 
+            "title": "locate"
+        }, 
+        {
+            "location": "/about/#skills", 
+            "text": "php,javascript,python", 
+            "title": "skills"
         }, 
         {
             "location": "/git/", 
@@ -84,6 +224,46 @@
             "location": "/git/#reset-revert", 
             "text": "http://yijiebuyi.com/blog/8f985d539566d0bf3b804df6be4e0c90.html", 
             "title": "\u56de\u6eda\uff1a   reset &amp; revert"
+        }, 
+        {
+            "location": "/markdown/", 
+            "text": "Maiore est animo rigore adspiciens et remos\n\n\nPatriaque fugit petit Eurynomes Medusaeo tristis resupinum\n\n\nLorem markdownum haec cuiquam quae. Suum aequorei, tempus Philomela ut intrata\nfiducia, o soceri retroque curat agnae deus corpora unda veneno, mihi! Supplice\nresonabat oculosque nitido facerent genas una negari umbra. Caespite hoc, vias\net intervenit aegide; dea ius et. Philammon iuris, rebus pro vincirem Pygmalion\nfacinus inplicuit formosissimus seque.\n\n\n\n\nArbitrio coegerat alterius obductos ipsa\n\n\nPuella suis pro nec mutat\n\n\nVoce enim cornua procubuit alimenta et populo\n\n\nMe pectora nocens et nodosaque quietem facto\n\n\nDivino unde conabar\n\n\n\n\nCarinis hunc stellas, formae! Divitiis superi, in vero commune \nacta sanguine\n\nEchion nomine, \nnisi\n quondam. Neque tenui \nnec\n: et dominum \ntrabes\n, unda\nnec novas oculos pluvialibus frementis suorum consilium. Redditur est sospite,\nmansit vergit, classe ebur ne arma temeraria locum spoliantis at tutus maris\nsub, mea.\n\n\nDuorum temptent irascitur dicunt Minos teque delabere umbram decipiet datis\ndubitas a gener dilapsa haec. \nCepit mater\n. Iam pontum et et ille, sed\nPyramus Phoebum \nsolo\n. Mille sed Parin quae\nspatium, iter, ira medio mihi trementem, ipse. Honore iunctis et illos quid\ntemptat: cremet colloque minimum natus \nore notas\n flectit vetus coniuge\nmulcebant.\n\n\nSanctius mittere dracones vellet Phoebo abductas\n\n\nTardis et horto vultus et raptor Procnes pactaque fidem rite dabat catenis.\nDicta Aeaciden et deos Attica flexisque caeli, tam speciem exstanti corpore\nlaboras totidemque Pandione. Digna me parabat alma dei tenuere mihi factus virgo\ndesinite, \nnova\n: lacrimis locus; aures. Sunt ferarum dabat redditus Nescierat\nperque, dum misit montes sanguine ferox alter alis avertere, quarto. Tam \nquibus\ncontigit\n nymphae abit inquit.\n\n\nsearchAddressMedia = ipv;\nvar access = tRom(scan_http_image(4), debugger * ledBccTween, -1 * 5) +\n        dvd_voip_mac;\nif (-2 / whiteWebManagement(install_pram) - process * 51) {\n    icmp *= fat.eidePdfPrimary(snippetFirewireWww);\n    class(57);\n}\n\n\n\nPrendique proelia illi. Secuta in amorem proximus fateor? Te vidit petiere\nanimam \ncredit facibusque\n pisce optetis, per\norbis inmensum Iovis responsaque solido nympharum commune, quam atque. Quisquis\namplectitur umerum primo sum humanam Iovi.\n\n\n\n\nVel longe horamque. Pennis fato; insigne ducentem galeae nullos protinus\nparente et ususabstrahit. Nato venit avidam stabantque mollirique et aliudve!\nFlammas natum hoc ira clamore corpore eodem finditque animoque captatus\ncredere utramque fuit cautibus adopertaque arvis, tuus dicta Atridae.\n\n\n\n\nNec sit lacerum virtutem fossae tela. Perceperat cervice huic quoque! Nubes et\nSolis pectora arcet flamma Phoebique deceat Chaoque commune vilior furens,\n\net\n. Ne urna est manebit lumen Hectora\naequor utero linquendus diuturnior totum.", 
+            "title": "Markdown"
+        }, 
+        {
+            "location": "/markdown/#maiore-est-animo-rigore-adspiciens-et-remos", 
+            "text": "", 
+            "title": "Maiore est animo rigore adspiciens et remos"
+        }, 
+        {
+            "location": "/markdown/#patriaque-fugit-petit-eurynomes-medusaeo-tristis-resupinum", 
+            "text": "Lorem markdownum haec cuiquam quae. Suum aequorei, tempus Philomela ut intrata\nfiducia, o soceri retroque curat agnae deus corpora unda veneno, mihi! Supplice\nresonabat oculosque nitido facerent genas una negari umbra. Caespite hoc, vias\net intervenit aegide; dea ius et. Philammon iuris, rebus pro vincirem Pygmalion\nfacinus inplicuit formosissimus seque.   Arbitrio coegerat alterius obductos ipsa  Puella suis pro nec mutat  Voce enim cornua procubuit alimenta et populo  Me pectora nocens et nodosaque quietem facto  Divino unde conabar   Carinis hunc stellas, formae! Divitiis superi, in vero commune  acta sanguine \nEchion nomine,  nisi  quondam. Neque tenui  nec : et dominum  trabes , unda\nnec novas oculos pluvialibus frementis suorum consilium. Redditur est sospite,\nmansit vergit, classe ebur ne arma temeraria locum spoliantis at tutus maris\nsub, mea.  Duorum temptent irascitur dicunt Minos teque delabere umbram decipiet datis\ndubitas a gener dilapsa haec.  Cepit mater . Iam pontum et et ille, sed\nPyramus Phoebum  solo . Mille sed Parin quae\nspatium, iter, ira medio mihi trementem, ipse. Honore iunctis et illos quid\ntemptat: cremet colloque minimum natus  ore notas  flectit vetus coniuge\nmulcebant.", 
+            "title": "Patriaque fugit petit Eurynomes Medusaeo tristis resupinum"
+        }, 
+        {
+            "location": "/markdown/#sanctius-mittere-dracones-vellet-phoebo-abductas", 
+            "text": "Tardis et horto vultus et raptor Procnes pactaque fidem rite dabat catenis.\nDicta Aeaciden et deos Attica flexisque caeli, tam speciem exstanti corpore\nlaboras totidemque Pandione. Digna me parabat alma dei tenuere mihi factus virgo\ndesinite,  nova : lacrimis locus; aures. Sunt ferarum dabat redditus Nescierat\nperque, dum misit montes sanguine ferox alter alis avertere, quarto. Tam  quibus\ncontigit  nymphae abit inquit.  searchAddressMedia = ipv;\nvar access = tRom(scan_http_image(4), debugger * ledBccTween, -1 * 5) +\n        dvd_voip_mac;\nif (-2 / whiteWebManagement(install_pram) - process * 51) {\n    icmp *= fat.eidePdfPrimary(snippetFirewireWww);\n    class(57);\n}  Prendique proelia illi. Secuta in amorem proximus fateor? Te vidit petiere\nanimam  credit facibusque  pisce optetis, per\norbis inmensum Iovis responsaque solido nympharum commune, quam atque. Quisquis\namplectitur umerum primo sum humanam Iovi.   Vel longe horamque. Pennis fato; insigne ducentem galeae nullos protinus\nparente et ususabstrahit. Nato venit avidam stabantque mollirique et aliudve!\nFlammas natum hoc ira clamore corpore eodem finditque animoque captatus\ncredere utramque fuit cautibus adopertaque arvis, tuus dicta Atridae.   Nec sit lacerum virtutem fossae tela. Perceperat cervice huic quoque! Nubes et\nSolis pectora arcet flamma Phoebique deceat Chaoque commune vilior furens, et . Ne urna est manebit lumen Hectora\naequor utero linquendus diuturnior totum.", 
+            "title": "Sanctius mittere dracones vellet Phoebo abductas"
+        }, 
+        {
+            "location": "/python/", 
+            "text": "python\n\n\n\u67e5\u770bpython\u5b89\u88c5\u6a21\u5757\n\n\n1\u3001\u8fdb\u5165\u4ea4\u4e92\u73af\u5883\uff1a\nhelp()\n ,\nmodules\n\n\n2\u3001\nhelp(modules)\n \n\n\n\u5b89\u88c5\u6a21\u5757\n\n\npip install MkDocs", 
+            "title": "Python"
+        }, 
+        {
+            "location": "/python/#python", 
+            "text": "", 
+            "title": "python"
+        }, 
+        {
+            "location": "/python/#python_1", 
+            "text": "1\u3001\u8fdb\u5165\u4ea4\u4e92\u73af\u5883\uff1a help()  , modules  2\u3001 help(modules)", 
+            "title": "\u67e5\u770bpython\u5b89\u88c5\u6a21\u5757"
+        }, 
+        {
+            "location": "/python/#_1", 
+            "text": "pip install MkDocs", 
+            "title": "\u5b89\u88c5\u6a21\u5757"
         }, 
         {
             "location": "/redis/", 
